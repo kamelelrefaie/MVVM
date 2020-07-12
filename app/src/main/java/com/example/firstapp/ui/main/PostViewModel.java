@@ -14,7 +14,7 @@ import retrofit2.Response;
 
 public class PostViewModel extends ViewModel {
     MutableLiveData<List<PostModel>> listMutableLiveData = new MutableLiveData<>();
-
+    MutableLiveData<String> posts = new MutableLiveData<>();
     public void getPosts(){
         PostClient.getINSTANCE().getPosts().enqueue(new Callback<List<PostModel>>() {
             @Override
@@ -24,6 +24,7 @@ public class PostViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<List<PostModel>> call, Throwable t) {
+                posts.setValue("rrorm");
 
             }
         });

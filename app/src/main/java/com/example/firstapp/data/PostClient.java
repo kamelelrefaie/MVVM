@@ -9,7 +9,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PostClient {
-    private static  final String BASE_URL ="http://www.jsonschema2pojo.org/";
+    private static  final String BASE_URL ="http://jsonplaceholder.typicode.com/";
     private PostInterface postInterface;
     private static PostClient INSTANCE;
 
